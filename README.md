@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Recruitment App,created using React and Redux.
+
+Uploaded photos in the will be stored locally.
 
 ## Available Scripts
 
