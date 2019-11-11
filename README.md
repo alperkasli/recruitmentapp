@@ -1,6 +1,6 @@
 Recruitment App,created using React and Redux.
 
-Uploaded photos in the will be stored locally.
+Uploaded photos in the app will be stored locally.
 
 ## Available Scripts
 
