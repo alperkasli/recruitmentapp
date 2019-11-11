@@ -1,4 +1,6 @@
-Recruitment App,created using React and Redux.
+Recruitment App.
+
+Created using React,Redux and React router. 
 
 Uploaded photos in the app will be stored locally.
 
