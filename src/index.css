@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.card-image {
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+
+}
+.card-image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.delete-button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.brand-logo{
+  font-size: 20px !important;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
