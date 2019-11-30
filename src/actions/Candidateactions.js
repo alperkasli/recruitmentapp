@@ -5,13 +5,14 @@ export const deleteCandidate = (id) => {
     }
 }
 
-export const addCandidate = (id, name, position, location, availability, photo) => {
+export const addCandidate = (id, name, position, location, experience, availability, photo) => {
     return {
         type: 'ADD_CANDIDATE',
         id,
         name,
         position,
         location,
+        experience,
         availability,
         photo
     }

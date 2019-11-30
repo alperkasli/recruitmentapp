@@ -2,6 +2,7 @@ const initState = {
     name: '',
     position: 'all',
     location: 'all',
+    experience: 'all',
     availability: 'all'
 }
 
@@ -22,6 +23,11 @@ const filtersReducer = (state = initState, action) => {
                 ...state,
                 location: action.location
             };
+        case 'EXPERIENCE':
+            return {
+                ...state,
+                experience: action.experience
+            };
         case 'AVAILABILITY':
             return {
                 ...state,
@@ -33,6 +39,7 @@ const filtersReducer = (state = initState, action) => {
                 name: '',
                 position: 'all',
                 location: 'all',
+                experience: 'all',
                 availability: 'all'
             }
         default:

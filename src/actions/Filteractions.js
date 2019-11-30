@@ -16,6 +16,12 @@ export const setLocationFilter = (location) => {
         location
     }
 }
+export const setExperienceFilter = (experience) => {
+    return {
+        type: 'EXPERIENCE',
+        experience
+    }
+}
 export const setAvailabilityFilter = (availability) => {
     return {
         type: 'AVAILABILITY',

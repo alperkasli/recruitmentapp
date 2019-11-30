@@ -1,16 +1,51 @@
 import React from 'react'
-import {setNameFilter, setLocationFilter, setPositionFilter, setAvailabilityFilter, resetFilters} from '../actions/Filteractions'
+import {setLocationFilter, setPositionFilter, setAvailabilityFilter, resetFilters, setExperienceFilter} from '../actions/Filteractions'
 import {connect} from 'react-redux'
+
+const availabilityOptions = [
+    {value: 'all', label: 'all'},
+    {value: 'immediately', label: 'immediately'},
+    {value: '1 week', label: '1 week'},
+    {value: '2 week', label: '2 week'},
+    {value: '3 week', label: '3 week'},
+    {value: '4 week', label: '4 week'},
+    {value: '6 week', label: '6 week'}
+];
+
+const locationOptions = [
+    {value: 'all', label: 'all', id:'location'},
+    {value: 'Dubai', label: 'Dubai', id:'location'},
+    {value: 'Abu Dhabi', label: 'Abu Dhabi', id:'location'},
+    {value: 'Ras Al Khaimah', label: 'Ras Al Khaimah', id:'location'},
+    {value: 'Sharjah', label: 'Sharjah', id:'location'}
+];
+
+const positionOptions = [
+    {value: 'all', label: 'all', id:'position'},
+    {value: 'Frontend Developer', label: 'Frontend Developer', id:'position'},
+    {value: 'Backend Developer', label: 'Backend Developer',id:'position'},
+    {value: 'Fullstack Developer', label: 'Fullstack Developer', id:'position'},
+    {value: 'Teamlead Developer', label: 'Teamlead Developer', id:'position'},
+    {value: 'QA Developer', label: 'QA Developer', id:'position'}
+];
+
+const experienceOptions = [
+    {value: 'all', label: 'all'},
+    {value: '1 year', label: '1 year'},
+    {value: '2 year', label: '2 year'},
+    {value: '3 year', label: '3 year'},
+    {value: '4 year', label: '4 year'},
+    {value: '5 year', label: '5 year'},
+    {value: '6 year', label: '6 year'},
+    {value: '7+ year', label: '7+ year'},
+];
 
 const FormItems = (props) => {
     // console.log(props)
-    const {setPositionFilter, setAvailabilityFilter, setNameFilter, setLocationFilter} = props;
+    const {setPositionFilter, setAvailabilityFilter, setLocationFilter, setExperienceFilter} = props;
 
-    const handleName = (e) => {
-        setNameFilter(e.target.value);
-    }
     const handleAvailability = (e) => {
-        setAvailabilityFilter(e.target.value)
+        setAvailabilityFilter(e.target.value);
     }
     const handlePosition = (e) => {
         setPositionFilter(e.target.value);
@@ -18,105 +53,105 @@ const FormItems = (props) => {
     const handleLocation = (e) => {
         setLocationFilter(e.target.value);
     }
+    const handleExperience = (e) => {
+        setExperienceFilter(e.target.value);
+    }
+    
 
     return (
         <div className="left-menu">
             <h4 className="title">Filter</h4>
 
-            <input 
+            {/* <input 
                 placeholder="Search Candidate.." 
                 className="search-bar" 
                 type="text"
                 onChange={handleName}
-             />
+             /> */}
 
-            <label>
-                position
-                <select 
-                    className="browser-default"
-                    onChange={handlePosition}
-                    value={props.filters.position}
-                    >
-                        <option value="all">All</option>
-                        <option value="Engineer">Engineer</option>
-                        <option value="Designer">Designer</option>
-                        <option value="Developer">Developer</option>
-                </select>
-            </label>
-            <label>
-                location
-                <select 
-                    className="browser-default"
-                    onChange={handleLocation}
-                    value={props.filters.location}
-                    >
-                        <option value="all">All</option>
-                        <option value="Dubai">Dubai</option>
-                        <option value="Sharjah">Sharjah</option>
-                        <option value="Abu Dhabi">Abu Dhabi</option>
-                </select>
-            </label>
-            <label>availability</label>
-            <div>
-                <label>
-                    <input
-                        type="radio" 
-                        id="availability"
-                        value="all"
-                        checked={props.filters.availability === 'all'}
-                        onChange={handleAvailability}
-                    />
-                    <span>all</span>
-                </label>
-            </div>
-            <div>
-                <label>
-                    <input
-                        type="radio" 
-                        id="availability"
-                        value="immediately"
-                        checked={props.filters.availability === 'immediately'}
-                        onChange={handleAvailability}
-                    />
-                    <span>immediately</span>
-                </label>
-            </div>
-            <div>
-                <label>
-                    <input
-                        type="radio" 
-                        id="availability"
-                        value="1 week"
-                        checked={props.filters.availability === '1 week'}
-                        onChange={handleAvailability}
-                    />
-                    <span>1 week</span>
-                </label>
-            </div>
-            <div>
-                <label>
-                    <input
-                        type="radio" 
-                        id="availability"
-                        value="2 week"
-                        checked={props.filters.availability === '2 week'}
-                        onChange={handleAvailability}
-                    />
-                    <span>2 week</span>
-                </label>
-            </div>
-            <div>
-                <label>
-                    <input
-                        type="radio" 
-                        id="availability"
-                        value="1 month"
-                        checked={props.filters.availability === '1 month'}
-                        onChange={handleAvailability}
-                    />
-                    <span>1 month</span>
-                </label>
-            </div>
+                <div className="row">
+                    <div className="col s12 m6">
+                        <h6 className="grey-text">Experience</h6>
+                        {
+                            experienceOptions.map((item, index) => (
+                                <div key={index}>
+                                    <label>
+                                        <input
+                                            type="radio" 
+                                            id="experience"
+                                            value={item.value}
+                                            checked={props.filters.experience === item.value}
+                                            onChange={handleExperience}
+                                        />
+                                        <span>{item.value}</span>
+                                    </label>
+                                </div> 
+                            ))
+                        }
+                    </div>
+
+                    <div className="col s12 m6">
+                        <h6 className="grey-text">Position</h6>
+                        {
+                            positionOptions.map((item, index) => (
+                                <div key={index}>
+                                    <label>
+                                        <input
+                                            type="radio" 
+                                            id="position"
+                                            value={item.value}
+                                            checked={props.filters.position === item.value}
+                                            onChange={handlePosition}
+                                        />
+                                        <span>{item.value}</span>
+                                    </label>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+                <hr />
+                <div className="row">
+                    <div className="col s12 m6">
+                        <h6 className="grey-text">Location</h6>
+                        {
+                            locationOptions.map((item, index) => (
+                                <div key={index}>
+                                    <label>
+                                        <input
+                                            type="radio" 
+                                            id="location"
+                                            value={item.value}
+                                            checked={props.filters.location === item.value}
+                                            onChange={handleLocation}
+                                        />
+                                        <span>{item.value}</span>
+                                    </label>
+                                </div> 
+                            ))
+                        }
+                    </div>
+
+                    <div className="col s12 m6">
+                        <h6 className="grey-text">Availability</h6>
+                        {
+                            availabilityOptions.map((item, index) => (
+                                <div key={index}>
+                                    <label>
+                                        <input
+                                            type="radio" 
+                                            id="availability"
+                                            value={item.value}
+                                            checked={props.filters.availability === item.value}
+                                            onChange={handleAvailability}
+                                        />
+                                        <span>{item.value}</span>
+                                    </label>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
             <br />
             <button className="waves-effect waves-light btn blue" onClick={() => props.resetFilters()}>Clear Filters</button>
             
@@ -127,14 +162,14 @@ const FormItems = (props) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        setNameFilter: (name) => (
-            dispatch(setNameFilter(name))
-        ),
         setPositionFilter: (position) => (
             dispatch(setPositionFilter(position))
         ),
         setLocationFilter: (location) => (
             dispatch(setLocationFilter(location))
+        ),
+        setExperienceFilter: (experience) => (
+            dispatch(setExperienceFilter(experience))
         ),
         setAvailabilityFilter: (availability) => (
             dispatch(setAvailabilityFilter(availability))
