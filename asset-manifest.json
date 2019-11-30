@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/recruitmentapp/static/css/main.7facd359.chunk.css",
-    "main.js": "/recruitmentapp/static/js/main.edc02a33.chunk.js",
-    "main.js.map": "/recruitmentapp/static/js/main.edc02a33.chunk.js.map",
+    "main.css": "/recruitmentapp/static/css/main.19cdaf82.chunk.css",
+    "main.js": "/recruitmentapp/static/js/main.a6d8b084.chunk.js",
+    "main.js.map": "/recruitmentapp/static/js/main.a6d8b084.chunk.js.map",
     "runtime-main.js": "/recruitmentapp/static/js/runtime-main.4c0d57ba.js",
     "runtime-main.js.map": "/recruitmentapp/static/js/runtime-main.4c0d57ba.js.map",
-    "static/js/2.b136b403.chunk.js": "/recruitmentapp/static/js/2.b136b403.chunk.js",
-    "static/js/2.b136b403.chunk.js.map": "/recruitmentapp/static/js/2.b136b403.chunk.js.map",
+    "static/js/2.b7b8b65e.chunk.js": "/recruitmentapp/static/js/2.b7b8b65e.chunk.js",
+    "static/js/2.b7b8b65e.chunk.js.map": "/recruitmentapp/static/js/2.b7b8b65e.chunk.js.map",
     "index.html": "/recruitmentapp/index.html",
-    "precache-manifest.4a04c28d750cf43b1de8f55fdb1c17da.js": "/recruitmentapp/precache-manifest.4a04c28d750cf43b1de8f55fdb1c17da.js",
+    "precache-manifest.a5b2a082cd326fabdf56edc9e2158576.js": "/recruitmentapp/precache-manifest.a5b2a082cd326fabdf56edc9e2158576.js",
     "service-worker.js": "/recruitmentapp/service-worker.js",
-    "static/css/main.7facd359.chunk.css.map": "/recruitmentapp/static/css/main.7facd359.chunk.css.map",
+    "static/css/main.19cdaf82.chunk.css.map": "/recruitmentapp/static/css/main.19cdaf82.chunk.css.map",
     "static/media/mephoto.png": "/recruitmentapp/static/media/mephoto.1275c866.png",
     "static/media/person.png": "/recruitmentapp/static/media/person.906ed4b6.png"
   },
   "entrypoints": [
     "static/js/runtime-main.4c0d57ba.js",
-    "static/js/2.b136b403.chunk.js",
-    "static/css/main.7facd359.chunk.css",
-    "static/js/main.edc02a33.chunk.js"
+    "static/js/2.b7b8b65e.chunk.js",
+    "static/css/main.19cdaf82.chunk.css",
+    "static/js/main.a6d8b084.chunk.js"
   ]
 }
