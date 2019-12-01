@@ -1,6 +1,6 @@
 Recruitment App.
 
-alperkasli.github.io/recruitmentapp
+https://alperkasli.github.io/recruitmentapp
 
 Created using React,Redux and React router. 
 
